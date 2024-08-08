@@ -5,14 +5,14 @@ import helmet from 'helmet';
 import hpp from 'hpp';
 import cookie from 'cookie-session';
 import compression from 'compression';
-import config from './config';
+import config from '@roots/config';
 import 'express-async-errors';
 import { Server } from 'socket.io';
 import { createClient } from 'redis';
 import { createAdapter } from '@socket.io/redis-adapter';
-import setupRoutes from './routes';
+import setupRoutes from '@roots/routes';
 import Logger from 'bunyan';
-import { CustomError, IErrorHandler } from './shared/globals/helpers/errorHandler';
+import { CustomError, IErrorHandler } from '@globals/helpers/errorHandler';
 const log: Logger = config.createLogger('server');
 export class ChattyServer {
   private app: Application;

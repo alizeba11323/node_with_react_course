@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import config from './config';
+import config from '@roots/config';
 import Logger from 'bunyan';
 export default () => {
   const log: Logger = config.createLogger('db:log');
